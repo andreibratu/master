@@ -4,3 +4,5 @@
 **\.pyc
 **\.p
 **\venv
+**\.pt
+**\lightning_logs\**
