@@ -22,7 +22,6 @@ class Encoder(nn.Module):
         self.input_size = input_size
         self.hparams = hparams
         self.encoder = nn.Sequential(
-            # nn.BatchNorm1d(input_size),
             nn.Conv1d(1, self.hparams["num_filters"], kernel_size=3, padding=1),
             nn.MaxPool1d(2, return_indices=True),
             nn.Conv1d(self.hparams["num_filters"], 2 * self.hparams["num_filters"], kernel_size=3, padding=1),
